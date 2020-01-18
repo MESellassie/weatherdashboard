@@ -21,8 +21,10 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <!-- Personal JS Link -->
-    <script src="script.js"></script>
+
+
+    <!-- Personal CSS Link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Weather Dashboard</title>
 </head>
@@ -41,14 +43,15 @@
             <div class="col-sm-4">
 
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input id= "city" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <span id="error"></span>
+                    <button id= "submitWeather" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <br />
 
 
-                <div class="card city1">
-                    <div class="card-body">
+                <div class="card">
+                    <div class="card-body" id="city1">
                         City 1
                     </div>
                 </div>
@@ -87,7 +90,7 @@
             <div class="col-sm-8">
                 <div class="card currentCity">
                     <div class="card-body">
-                        <h1>City Header</h1>
+                        <h1 class="cityHeader">City Header</h1>
                         <br />
                         <p>Temperature: </p>
                         <p>Humidity: </p>
@@ -150,6 +153,9 @@
     <!-- jQuery Link -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Personal JS Link -->
+    <script src="script.js"></script>
 </body>
 
 </html>
