@@ -4,10 +4,19 @@ $(document).ready(function () {
 
         event.preventDefault()
 
+        $('input[type="search"]').each(function () {
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            localStorage.setItem(id, value);
+            var value = localStorage.getItem(id);
+            $("#city1").append(value + " ");
+        });
 
         var APPID = "681f2e92554fd1aead71f73e526671ef";
         var city = $("#city").val();
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=" + APPID;
+
+
 
         if (city != "") {
 
@@ -147,17 +156,13 @@ $(document).ready(function () {
                     $("#day5Hum").append(humDay5);
 
 
-
-
-
-
                 })
-
-
 
             })
 
-        } else {
+        }
+        
+        else {
             $("#error").html("Please enter a city");
         }
 
