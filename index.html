@@ -21,6 +21,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+    <!-- Moment.JS Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 
     <!-- Personal CSS Link -->
@@ -43,9 +45,11 @@
             <div class="col-sm-4">
 
                 <form class="form-inline my-2 my-lg-0">
-                    <input id= "city" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input id="city" class="form-control mr-sm-2" type="search" placeholder="Search"
+                        aria-label="Search">
                     <span id="error"></span>
-                    <button id= "submitWeather" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button id="submitWeather" class="btn btn-outline-success my-2 my-sm-0"
+                        type="submit">Search</button>
                 </form>
                 <br />
 
@@ -90,55 +94,72 @@
             <div class="col-sm-8">
                 <div class="card currentCity">
                     <div class="card-body">
-                        <h1 class="cityHeader">City Header</h1>
+                        <div class="row">
+                            <h1 class="col-sm-7 cityHeader"></h1>
+                            <div class="col-sm-1 iconHeader"><img id="wIcon" src="" alt="Weather icon"></div>
+                        </div>
                         <br />
-                        <p>Temperature: </p>
-                        <p>Humidity: </p>
-                        <p>Wind Speed: </p>
-                        <p>UV Index: </p>
+                        <div class="row">
+                            <p class="col-sm-8" id="tempHeader">Temperature: </p>
+                            <p class="col-sm-8" id="humidityHeader">Humidity: </p>
+                            <p class="col-sm-8" id="windHeader">Wind Speed: </p>
+                            <p class="col-sm-8" id="UVHeader">UV Index: </p>
+                        </div>
                     </div>
                 </div>
                 <br />
 
                 <div class="card-group fiveDay">
-                    <div class="card day1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
-                        </div>
+                    <div class="row">
+                        <h4 class="col-sm-12">5-Day Forecast: </h4>
                     </div>
 
-                    <div class="card day2">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                    <div class="row">
+                        <div class="card day1 col-sm-2.5">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day1Dt">Card title</h5>
+                                <img id= "day1Img" src="">
+                                <p class="card-text" id="day1Temp">Temp: </p>
+                                <p class="card-text" id="day1Hum">Humidity: </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card day3">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                        <div class="card day2 col-sm-2.5">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day2Dt">Card title</h5>
+                                <img id= "day2Img" src="">
+                                <p class="card-text" id="day2Temp">Temp: </p>
+                                <p class="card-text" id="day2Hum">Humidity: </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card day4">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                        <div class="card day3 col-sm-2.5">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day3Dt">Card title</h5>
+                                <img id= "day3Img" src="">
+                                <p class="card-text" id="day3Temp">Temp: </p>
+                                <p class="card-text" id="day3Hum">Humidity: </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card day5">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                        <div class="card day4 col-sm-2.5">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day4Dt">Card title</h5>
+                                <img id= "day4Img" src="">
+                                <p class="card-text" id="day4Temp">Temp: </p>
+                                <p class="card-text" id="day4Hum">Humidity: </p>
+                            </div>
                         </div>
+
+                        <div class="card day5 col-sm-2.5">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day5Dt">Card title</h5>
+                                <img id= "day5Img" src="">
+                                <p class="card-text" id="day5Temp">Temp: </p>
+                                <p class="card-text" id="day5Hum">Humidity: </p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
