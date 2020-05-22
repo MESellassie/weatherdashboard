@@ -14,6 +14,6 @@ Micah S. Evans
 
 
 ## Images
-![]()
+![](https://github.com/MESellassie/weatherdashboard/blob/master/images/rain-791893_640.jpg?raw=true)
 
-![]()
+![](https://github.com/MESellassie/weatherdashboard/blob/master/images/screen-cap.JPG?raw=true)
