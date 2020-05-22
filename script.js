@@ -28,6 +28,9 @@ $(document).ready(function () {
             }).then(function (response) {
                 console.log(response);
                 console.log(queryURL);
+
+
+
                 // Targets the weather icon
                 var weatherCode = response.weather[0].icon;
                 // Appends the city name to the main header
@@ -74,6 +77,7 @@ $(document).ready(function () {
                 }).then(function (response) {
                     console.log(query5Day);
                     console.log(response);
+
 
                     // Day 1 Date
                     var day1Date = moment().add(1, 'days').format('l');
@@ -159,6 +163,7 @@ $(document).ready(function () {
                 })
 
             })
+
 
         }
         
